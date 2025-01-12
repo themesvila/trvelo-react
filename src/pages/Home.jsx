@@ -11,7 +11,7 @@ import Testimonials from '../components/Testimonials'
 import Features from '../components/Features'
 import Video from '../components/Video'
 import Blog from '../components/Blog'
-import CTA from '../components/cta'
+import CTA from '../components/CTA'
 
 export default class Home extends Component {
   render() {
