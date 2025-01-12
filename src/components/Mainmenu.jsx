@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import menu_data from "./menu_data";
+import menu_data from "../demodata/menu_data";
 
 
 export class Mainmenu extends Component {
