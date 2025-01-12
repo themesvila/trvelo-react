@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import Mainmenu from './Mainmenu'
+// import Mainmenu from './Mainmenu'
 
 import sitelogo from '/assets/img/logo.svg'
+import { Link } from 'react-router-dom'
 
-
-export class Header extends Component {
-  render() {
-    return (
-      <div>        
+function Header() {
+  return (
+    <div>
             <div className="fix-area">
                 <div className="offcanvas__info">
                     <div className="offcanvas__wrapper">
@@ -38,14 +37,14 @@ export class Header extends Component {
                     <div className="row">
                         <div className="col-xl-2 col-md-3 align-self-center">
                             <div className="site_logo">
-                                <img src={sitelogo} alt="Trvelo" />
+                                <Link to="/"><img src={sitelogo} alt="Trvelo" /></Link>
                             </div>
                         </div>	
 
                         <div className="col-xl-10 col-md-9">
                             <div className="header_right d-flex justify-content-end">
                                 <nav className="main-menu align-self-center">
-                                    <Mainmenu/>
+                                  
                                 </nav>
                                 
                                 <div className="call_us d-flex align-self-center">
@@ -66,10 +65,10 @@ export class Header extends Component {
                         </div>
                     </div>
                 </div>
-            </header>  
-      </div>
-    )
-  }
+            </header>         
+
+    </div>
+  )
 }
 
 export default Header
