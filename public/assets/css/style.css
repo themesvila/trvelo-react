@@ -774,9 +774,11 @@ a:focus{
 	text-align: center;
 	border-radius: 50%;
 	transition: .5s;
+	padding: 0;
 }
 .harrow:hover{
 	background: var(--green);
+	border-color: var(--green);
 	color: var(--white);
 }
 .hs_prev_arrow{left: 40px;}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import testimonials_data from "../demodata/testimonials";
 
 export class Testimonials extends Component {
   render() {
@@ -36,7 +37,8 @@ export class Testimonials extends Component {
 						
 						<div class="test_slider">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide">
+							 {testimonials_data.map((item, i) => (
+								<div key={i} class="swiper-slide">
 									<div class="testimonials_item">
 										<div class="test_rating">
 											<i class="fa-solid fa-star"></i>
@@ -47,51 +49,15 @@ export class Testimonials extends Component {
 										</div>
 										
 										<p>
-											“ Contrary to popular belief, Lorem Ipsum is not simply 
-											random text. It  has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old ”																									
+											“{item.content}”																									
 										</p>
-										<h4>Masum Billah</h4>
-										<span class="designation">CEO of ABC LTD</span>
-									</div>
-								</div>	
-
-								<div class="swiper-slide">
-									<div class="testimonials_item">
-										<div class="test_rating">
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-										</div>
-										
-										<p>
-											“ Contrary to popular belief, Lorem Ipsum is not simply 
-											random text. It  has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old ”																									
-										</p>
-										<h4>Muntasir Billah</h4>
-										<span class="designation">CEO of ABC LTD</span>
-									</div>
-								</div>							
-
-								<div class="swiper-slide">
-									<div class="testimonials_item">
-										<div class="test_rating">
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-											<i class="fa-solid fa-star"></i>
-										</div>
-										
-										<p>
-											“ Contrary to popular belief, Lorem Ipsum is not simply 
-											random text. It  has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old ”																									
-										</p>
-										<h4>Mutasim Billah</h4>
-										<span class="designation">CEO of ABC LTD</span>
+										<h4>{item.name}</h4>
+										<span class="designation">{item.designation}</span>
 									</div>
 								</div>
+								                      
+								))}							
+	
 							</div>
 						</div>
 					</div>
