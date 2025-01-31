@@ -8,7 +8,7 @@ export class SearchFilter extends Component {
 			<div className="row">
 				<div className="col-xl-10 col-lg-12 col-md-10 col-10 mx-auto text-center">
 					<div className="tr_search_filter">
-						<form action="#" className="d-flex justify-content-center" method="post">
+						<form action="index.html" className="d-flex justify-content-center" method="post">
 							<div className="tr_search_location">
 								<label for="trs_location">Location*</label>
 								<select id="trs_location">

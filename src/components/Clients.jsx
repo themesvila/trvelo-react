@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import clients_data from "../demodata/clients";
+import OwlCarousel from "./OwlCarousel";
 
 export default class Clients extends Component {
   render() {
