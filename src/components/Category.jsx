@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import category_data from "../demodata/category";
 
 export class Category extends Component {
   render() {
@@ -14,78 +17,33 @@ export class Category extends Component {
 					</div>
 					
 					<div className="col-12">
-						<div className="trcategory_slider owl-carousel">
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/1.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
+						<div className="trcategory_slider">
+							<Swiper
+								spaceBetween={50}
+								slidesPerView={6}
+								loop={true}
+								onSlideChange={() => console.log('slide change')}
+								onSwiper={(swiper) => console.log(swiper)}
+							>
+
+								{category_data.map((item, i) => (
+									<SwiperSlide key={i}>	
+										<div className="category_item text-center">
+											<a href={item.url}>
+												<div className="tcat_image_wrap">
+													<div className="tcat_img" style={{ backgroundImage:`url(${item.image})` }}>
+														<i className="ph ph-arrow-square-out"></i>
+													</div>
+												</div>
+												<h4>{item.title}</h4>
+												<span>{item.counter} Places</span>
+											</a>
 										</div>
-									</div>
-									<h4>Abu Dhabi</h4>
-									<span>200 Places</span>
-								</a>
-							</div>							
+									</SwiperSlide>
+								))}		
+
+							</Swiper>
 							
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/2.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
-										</div>
-									</div>
-									<h4>Australia</h4>
-									<span>150 Places</span>
-								</a>
-							</div>	
-
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/3.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
-										</div>
-									</div>
-									<h4>Switzerland</h4>
-									<span>220 Places</span>
-								</a>
-							</div>	
-
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/4.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
-										</div>
-									</div>
-									<h4>Germany</h4>
-									<span>150 Places</span>
-								</a>
-							</div>							
-							
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/5.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
-										</div>
-									</div>
-									<h4>France</h4>
-									<span>160 Places</span>
-								</a>
-							</div>		
-
-							<div className="category_item text-center">
-								<a href="#">
-									<div className="tcat_image_wrap">
-										<div className="tcat_img" style={{ backgroundImage: `url(/assets/img/category/6.png)` }}>
-											<i className="ph ph-arrow-square-out"></i>
-										</div>
-									</div>
-									<h4>Romania</h4>
-									<span>225 Places</span>
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>

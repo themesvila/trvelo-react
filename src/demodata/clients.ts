@@ -46,7 +46,7 @@ const clients_data: DataType[] = [
 	}, 	
 	{
 		id: 7,
-        image: "assets/img/clients/7.png",
+        image: "assets/img/clients/1.png",
 		url: "#",
     
 	}, 	

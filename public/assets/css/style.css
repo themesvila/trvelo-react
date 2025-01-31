@@ -1474,10 +1474,15 @@ a:focus{
 	color: var(--green);
 }
 .blog_meta {
-
+	color: var(--body);
 }
 .blog_meta a{
 	font-weight: 500;
+	color: var(--body);
+}
+.blog_meta a:hover,
+.blog_meta a:focus{
+	color: var(--green);
 }
 .blog_meta span{
 	padding-right: 15px;

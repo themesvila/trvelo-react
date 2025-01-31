@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import testimonials_data from "../demodata/testimonials";
+import { TestimonialNav } from '../components/testinav';
 
 export class Testimonials extends Component {
   render() {
@@ -17,10 +20,7 @@ export class Testimonials extends Component {
 								
 								<div className="col-sm-6 align-self-center text-center">
 									<img src="assets/img/review/3.png" className="test_image2" alt="img" />
-									<div className="test_arrow">
-										<span className="tarrow_left"><i className="ph ph-arrow-left"></i></span>
-										<span className="tarrow_right"><i className="ph ph-arrow-right"></i></span>
-									</div>	
+									<TestimonialNav />
 								</div>	
 	
 							</div>
@@ -36,29 +36,37 @@ export class Testimonials extends Component {
 						</div>
 						
 						<div className="test_slider">
-							<div className="swiper-wrapper">
-							 {testimonials_data.map((item, i) => (
-								<div key={i} className="swiper-slide">
-									<div className="testimonials_item">
-										<div className="test_rating">
-											<i className="fa-solid fa-star"></i>
-											<i className="fa-solid fa-star"></i>
-											<i className="fa-solid fa-star"></i>
-											<i className="fa-solid fa-star"></i>
-											<i className="fa-solid fa-star"></i>
-										</div>
-										
-										<p>
-											“{item.content}”																									
-										</p>
-										<h4>{item.name}</h4>
-										<span className="designation">{item.designation}</span>
-									</div>
-								</div>
-								                      
-								))}							
-	
-							</div>
+						
+						<Swiper
+								spaceBetween={0}
+								slidesPerView={1}
+								loop={true}
+								onSlideChange={() => console.log('slide change')}
+								onSwiper={(swiper) => console.log(swiper)}
+							>
+
+								{testimonials_data.map((item, i) => (
+									<SwiperSlide key={i}>
+										<div className="testimonials_item">
+											<div className="test_rating">
+												<i className="fa-solid fa-star"></i>
+												<i className="fa-solid fa-star"></i>
+												<i className="fa-solid fa-star"></i>
+												<i className="fa-solid fa-star"></i>
+												<i className="fa-solid fa-star"></i>
+											</div>
+											
+											<p>
+												“{item.content}”																									
+											</p>
+											<h4>{item.name}</h4>
+											<span className="designation">{item.designation}</span>
+										</div>	
+									</SwiperSlide>
+								))}		
+								
+							</Swiper>
+
 						</div>
 					</div>
 				</div>

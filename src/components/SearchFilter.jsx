@@ -8,7 +8,7 @@ export class SearchFilter extends Component {
 			<div className="row">
 				<div className="col-xl-10 col-lg-12 col-md-10 col-10 mx-auto text-center">
 					<div className="tr_search_filter">
-						<form action="index.html" className="d-flex justify-content-center" method="post">
+						<form action="" className="d-flex justify-content-center" method="post">
 							<div className="tr_search_location">
 								<label for="trs_location">Location*</label>
 								<select id="trs_location">
@@ -17,7 +17,7 @@ export class SearchFilter extends Component {
 									<option>Caribbean Cove</option>
 									<option>Dubai Oasis</option>
 									<option>London Luxe</option>
-									<option>Maldives Havenssss</option>
+									<option>Maldives Havens</option>
 								</select>
 							</div>		
 
@@ -57,7 +57,7 @@ export class SearchFilter extends Component {
 								</select>
 							</div>
 							
-							<button type="submit">Search <i className="ph ph-magnifying-glass"></i></button>
+							<button type="button">Search <i className="ph ph-magnifying-glass"></i></button>
 						</form>
 					</div>
 				</div>
