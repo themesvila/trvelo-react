@@ -17,7 +17,7 @@ export class SearchFilter extends Component {
 									<option>Caribbean Cove</option>
 									<option>Dubai Oasis</option>
 									<option>London Luxe</option>
-									<option>Maldives Haven</option>
+									<option>Maldives Havenssss</option>
 								</select>
 							</div>		
 
