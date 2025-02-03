@@ -79,9 +79,9 @@ export class Footer extends Component {
 							<div className="col-xl-4 col-lg-12 col-md-6 col-12">
 								<div className="footer_widget subscription_form">
 									<h3 className="footer-title">Subscribe To Newsletter</h3>
-									<form id="newsletter_form" action="contact.php" method="POST">
+									<form id="newsletter_form" action="#" method="POST">
 										<input type="email" placeholder="Please Enter Email" />
-										<button type="submit"><i className="ph ph-rocket-launch"></i></button>
+										<button type="button"><i className="ph ph-rocket-launch"></i></button>
 									</form>
 									<span>Don’t Spam, Please enter Real Email</span>
 									<p className="form-message mt-4 text-center"></p>
